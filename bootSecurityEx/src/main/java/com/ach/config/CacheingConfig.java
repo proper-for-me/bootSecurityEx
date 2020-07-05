@@ -17,7 +17,7 @@ public class CacheingConfig {
 
 	@Bean
 	@Qualifier("memoryCacheingConfig")
-	public CacheManager memoryCacheingConfig() {
+	public CacheManager memoryCacheingConfig() { 
 		SimpleCacheManager simpleCacheManager = new SimpleCacheManager();
 		simpleCacheManager.setCaches(Arrays.asList(new ConcurrentMapCache("memList")));
 		return simpleCacheManager;
